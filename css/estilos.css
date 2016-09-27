@@ -15,17 +15,27 @@ header
 	background: blue; /*fondo*/
 	border: 1px solid red;
 	color: white; /*letra*/
+	/*padding: 0px 0px 10px 0px;*/
 	text-align: center; /*alineación*/
 }
 
 header nav ul li
 {
 	/*border: 1px solid yellow;*/
-	background: orange;
-	border-radius: 5px;
+	background: orange; /*color de fondo*/
+	border-radius: 5px; /*bordes redondeados*/
+	box-shadow: 2px 2px;
 	display: inline-block; /*rompe modelo de caja*/
+	margin: 0px 10px 50px 10px; /*separo las cajas*/
+	padding: 5px 10px; /*agrando los botones(interno)*/
+	width: 80px; /*ancho del botón*/
 }
 
+header nav ul li:hover /*mouse por encima*/
+{
+	background: white; /*color de fondo*/
+	color: orange; /*color de letra*/
+}
 
 
 
