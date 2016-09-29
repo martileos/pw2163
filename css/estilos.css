@@ -7,14 +7,22 @@ body /*selector - etiqueta*/
 	/*atributo:valor;*/
 	border: 1px solid blue;
 	border-radius: 5px;
+	font-size: 16px; /*tamaño de fuente estándar*/
 	margin: 0px auto;
 	max-width: 1024px;
+}
+
+footer
+{
+	border: 1px solid blue;
+	font-size: 0.5em;
+	text-align: center; /*alineamos todo el texto*/
 }
 
 header
 {
 	background: blue; /*fondo*/
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	color: white; /*letra*/
 	/*padding: 0px 0px 10px 0px;*/
 	text-align: center; /*alineación*/
@@ -44,6 +52,31 @@ header nav ul li:hover /*mouse por encima*/
 	background: white; /*color de fondo*/
 	color: orange; /*color de letra*/
 }
+
+main 
+{
+	margin: 15px 0px 0px 0px;
+}
+
+main section article
+{
+	/*border: 1px solid red;*/
+	display: inline-block;
+	vertical-align: top;
+	width: 24%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
