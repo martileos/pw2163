@@ -1,0 +1,59 @@
+body
+{
+	border: 1px solid blue;
+	font-family: arial;
+	font-size: 16px;   /*1em*/
+	margin: 0px auto;  /*centramos la página*/
+	max-width: 1024px; /*ancho de pantalla*/
+}
+form
+{
+	float: right;
+	margin: -40px 20px 0px 0px;
+}
+form input /*para el botón y la caja de texto*/
+{
+	border-radius: 5px;
+}
+form input[type="button"]
+{
+	background: green;
+	border: 0px;
+	color: white;
+}
+header
+{
+	background: #B3D8EB; /*Color de fondo*/	
+}
+header nav
+{
+	background: #0E6CB0;
+	border-radius: 5px;
+	margin: 0 auto;
+	padding: 2px 0px 2px 0px;
+	width: 99%;
+}
+header nav ul li
+{
+	color: white;
+	display: inline-block;
+	margin: 0px 20px 0px 0px;
+}
+#logo
+{
+	float: left;
+	margin: -120px 0px 0px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
