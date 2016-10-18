@@ -14,6 +14,7 @@ form
 form input /*para el botón y la caja de texto*/
 {
 	border-radius: 5px;
+	height: 30px;
 }
 form input[type="button"]
 {
@@ -44,6 +45,39 @@ header nav ul li
 	float: left;
 	margin: -120px 0px 0px 0px;
 }
+#seccion01 article
+{
+	text-align: center;
+}
+#seccion01 article img
+{
+	border: 5px solid rgba(150,150,150,0.3);
+	margin: 15px 0px 0px 0px;
+}
+#seccion02 
+{
+	margin: 0 auto;
+}
+#seccion02 article
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 32.8%;
+}
+.otraSeccion,.unaSeccion /*dos o mas selectores*/
+{
+	font-family: arial;  /*tipo de letra*/
+	font-weight: bold;   /*negritas*/
+}
+.otraSeccion
+{
+	font-size: 2.5em; /*tamaño de letra*/
+}
+.unaSeccion
+{
+	font-size: 4.5em; /*tamaño de letra*/
+}
+
 
 
 
