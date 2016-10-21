@@ -12,6 +12,10 @@ header input
 	margin-top: 15px;
 	position: relative;
 }
+header nav
+{
+	margin-left: 220px;
+}
 header nav ul li
 {
 	border-bottom: 1px solid gray;
@@ -20,6 +24,14 @@ header nav ul li
 	font-size: 1.8em;
 	margin-right: 15px;
 	/*text-decoration: underline;*/
+}
+#bgoffer
+{
+	left: -35px;
+	position: relative;
+	/*Podemos usar los atributos left, right, top*/
+	top: -410px;
+
 }
 #granthams /*logo de la empresa*/
 {
@@ -31,6 +43,40 @@ header nav ul li
 	float: right;
 	margin-top: 20px;
 }
+#primerseccion
+{
+	margin-top: 70px;
+}
+#primerseccion article
+{
+	display: inline-block;
+	margin-left: 25px;
+	vertical-align: top;
+}
+#secc01art01
+{
+	width: 60%;
+}
+#secc01art02
+{
+	width: 30%;
+}
+.wecanoffer
+{
+	color: #FF0099;
+	font-size: 3.5em;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
