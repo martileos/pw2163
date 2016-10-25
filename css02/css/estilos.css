@@ -45,6 +45,7 @@ header nav ul li
 }
 #primerseccion
 {
+	height: 317.99px;
 	margin-top: 70px;
 }
 #primerseccion article
@@ -57,9 +58,26 @@ header nav ul li
 {
 	width: 60%;
 }
+#segundaseccion article
+{
+	padding-right: 180px;
+	text-align: right;
+}
 #secc01art02
 {
 	width: 30%;
+}
+#terceraseccion article
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 22%;
+}
+.numerotelefono
+{
+	color: #FF0099;
+	font-size: 2em;
+	font-weight: bold;
 }
 .wecanoffer
 {
