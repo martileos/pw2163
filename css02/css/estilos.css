@@ -76,7 +76,7 @@ header nav ul li
 }
 #secc01art02 ul li:before
 {
-	content: "· ";
+	content: "• ";
 	color: #FF0099;
 }
 #terceraseccion article
