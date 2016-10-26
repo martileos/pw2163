@@ -38,6 +38,9 @@ header nav ul li
 	margin-top:  20px;
 	margin-left: 25px;
 }
+#mailinglist{
+	padding-top: 60px;
+}
 #paint
 {
 	float: right;
@@ -67,12 +70,40 @@ header nav ul li
 {
 	width: 30%;
 }
+#secc01art02 ul
+{
+	list-style: none;
+}
+#secc01art02 ul li:before
+{
+	content: "· ";
+	color: #FF0099;
+}
 #terceraseccion article
 {
 	display: inline-block;
 	vertical-align: top;
 	width: 22%;
 }
+#terceraseccion article img
+{
+	vertical-align: middle;
+}
+
+.colorazul{
+	color: #16BEF8;
+}
+.colorrosa{
+	color: #F4A3C6;
+}
+.colorverde{
+	color: #A6DE47;
+}
+.colorazul,.colorrosa,.colorverde{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
 .numerotelefono
 {
 	color: #FF0099;
