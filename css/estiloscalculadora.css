@@ -1,0 +1,45 @@
+body
+{
+	font-size: 16px;
+	margin: 0 auto;
+	max-width: 1024px;
+	text-align: center;
+}
+form
+{
+	background: gray;
+	border: 1px dashed black;
+	border-radius: 5px;
+	box-shadow: 15px 15px 15px rgba(50,50,50,0.7);
+	margin: 0 auto;
+	padding: 10px;
+	width: 300px;
+}
+form input
+{
+	border-radius: 5px;
+	font-size: 1.7em;
+}
+form input[type="text"]
+{
+	text-align: right;
+}
+form input[type="button"]
+{
+	background: blue;
+	color: white;
+	width: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
