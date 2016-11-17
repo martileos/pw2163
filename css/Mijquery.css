@@ -1,0 +1,10 @@
+#imgFoto
+{
+	/*Con un valor muy grande redondea el marco 
+	de la foto*/
+	border-radius: 500px;
+}
+#txtNombre,#imgFoto
+{
+	display: none; /*Se oculta*/
+}

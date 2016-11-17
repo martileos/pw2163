@@ -6,9 +6,12 @@ var inicio = function() //main
 		$.ajax({
 		  url: 'https://randomuser.me/api/',
 		  dataType: 'json',
-		  success: function(data) {
+		  success: function(data) { //Exito
+		  	$("#imgFoto").show("slow");
+		  	$("#txtNombre").show("slow");
 		  	$("#txtNombre").val(data.results[0].name.first+" "+data.results[0].name.last);
 		    $("#imgFoto").attr("src",data.results[0].picture.large);
+		    $("#miArticle").html("Texto");
 		    console.log(data.results[0].name.first+" "+data.results[0].name.last);
 		  }
 		});
@@ -18,3 +21,11 @@ var inicio = function() //main
 
 //Inicializar nuestro Documento
 $(document).on("ready",inicio);
+
+
+
+
+
+
+
+
