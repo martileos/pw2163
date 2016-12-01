@@ -56,6 +56,11 @@ var inicioUsuarios = function()
 	{
 		$("#artAltaUsuarios").show("slow");
 	}
+
+	var GuardaUsuario = function()
+	{
+		//Código para guardar usuario.
+	}
 	//keypress: se ejecuta cada vez que presiono una 
 	//tecla sobre el input.
 	$("#txtClave").on("keypress",teclaClave);
