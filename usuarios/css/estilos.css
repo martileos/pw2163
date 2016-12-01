@@ -1,6 +1,5 @@
 body
 {
-	background: green;
 	margin: 0 auto;
 	max-width: 1024px;
 }
@@ -23,14 +22,15 @@ header nav ul li
 	margin-right: 10px;
 	display: inline-block;
 }
-/*main article */#artAltaUsuarios
-{
+#artAltaUsuarios
+{	
 	display: none;
 	margin: 0 auto;
-	width: 250px;
+	width: 450px;
 }
 #entradaUsuario
 {
+
 	margin: 0 auto;
 	width: 350px;
 }
