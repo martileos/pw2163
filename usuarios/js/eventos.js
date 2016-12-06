@@ -232,6 +232,29 @@ var inicioUsuarios = function()
 			alert("Todos los campos son obligatorios");
 	}
 
+	var Consulta = function()
+	{
+		var parametros="opcion=consultas"+
+					   "&id="+Math.random();
+		$.ajax({
+			cache:false,
+			type:"POST",
+			dataType:"json",
+			url:"php/utilerias.php",
+			data:parametros,
+			success:function(response){
+				if(response.respuesta == true)
+				{
+					$("#artConsultas").show();
+					$("#tablaConsultas").html(response.renglones);
+				}
+			},
+			error:function(xhr,ajaxOptions,thrownError){
+					console.log("No se pudo conectar al servidor");
+			}
+		});
+	}
+
 	//keypress: se ejecuta cada vez que presiono una 
 	//tecla sobre el input.
 	$("#txtClave").on("keypress",teclaClave);
@@ -242,6 +265,7 @@ var inicioUsuarios = function()
 	$("#btnGuardaUsuario").on("click",GuardaUsuario);
 	$("#btnBajaUsuario").on("click",BajaUsuario);
 	$("#btnCambioUsuario").on("click",CambioUsuario);
+	$("#btnConsulta").on("click",Consulta);
 
 }
 //Evento inicial
