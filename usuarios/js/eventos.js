@@ -152,6 +152,43 @@ var inicioUsuarios = function()
 			});
 		}
 	}
+	var BajaUsuario = function()
+	{
+		event.preventDefault();
+		//Código para guardar usuario.
+		//Recuperamos los valores del formulario y los
+		//ponemos en variables locales.
+		var usuario = $("#txtUsuarioNombre").val(); 
+		if(usuario!="")
+		{
+			//Parámetros para el ajax
+			var parametros = "opcion=baja"+
+							 "&usuario="+usuario+							
+							 "&id="+Math.random();
+			$.ajax({
+				cache:false,
+				type:"POST",
+				dataType:"json",
+				url:"php/utilerias.php",
+				data:parametros,
+				success:function(response){
+					if(response.respuesta == true)
+					{
+						alert("Usuario dado de baja");
+						$("#artAltaUsuarios > input").val(""); 
+					}
+					else
+						alert("Usuario no se pudo dar de baja");
+				},
+				error:function(xhr,ajaxOptions,thrownError){
+					console.log("No se pudo conectar al servidor");
+				}
+			});
+		}
+		else
+			alert("Todos los campos son obligatorios");
+
+	}
 	//keypress: se ejecuta cada vez que presiono una 
 	//tecla sobre el input.
 	$("#txtClave").on("keypress",teclaClave);
@@ -160,6 +197,8 @@ var inicioUsuarios = function()
 	$("#btnCambio").on("click",Cambio);
 	$("#txtUsuarioNombre").on("keypress",teclaUsuario);
 	$("#btnGuardaUsuario").on("click",GuardaUsuario);
+	$("#btnBajaUsuario").on("click",BajaUsuario);
+
 }
 //Evento inicial
 $(document).on("ready",inicioUsuarios);

@@ -91,6 +91,23 @@
 		print json_encode($arregloJSON);
 	}
 
+	function bajaUsuario()
+	{
+		$respuesta = false;
+		$u = GetSQLValueString($_POST["usuario"],"text");
+		$conexion = mysql_connect("localhost","root","");
+		mysql_select_db("bd2163");
+		$consulta = sprintf("delete from usuarios where usuario=%s",$u);
+		mysql_query($consulta);
+		//Si el registro se borró
+		if(mysql_affected_rows()>0) 
+		{
+			$respuesta = true;
+		}
+		$arregloJSON = array('respuesta' => $respuesta );
+		print json_encode($arregloJSON);
+	}
+
 	//Menú principal
 	$opc = $_POST["opcion"];
 	switch ($opc) {
@@ -102,6 +119,9 @@
 			break;
 		case 'guarda':
 			guardaUsuario();
+			break;
+		case 'baja':
+			bajaUsuario();
 			break;
 		default:
 			# code...
