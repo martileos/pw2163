@@ -83,7 +83,46 @@ var inicioUsuarios = function()
 
 	var GuardaUsuario = function()
 	{
+		event.preventDefault();
 		//Código para guardar usuario.
+		//Recuperamos los valores del formulario y los
+		//ponemos en variables locales.
+		var usuario = $("#txtUsuarioNombre").val(); 
+		var nombre  = $("#txtNombre").val();
+		var clave   = $("#txtClaveNombre").val();
+		var tipo    = $("#txtTipo").val();
+		if(usuario!="" && nombre!="" && clave!="" && tipo!="")
+		{
+			//Parámetros para el ajax
+			var parametros = "opcion=guarda"+
+							 "&usuario="+usuario+
+							 "&nombre="+nombre+
+							 "&clave="+clave+
+							 "&tipo="+tipo+
+							 "&id="+Math.random();
+			$.ajax({
+				cache:false,
+				type:"POST",
+				dataType:"json",
+				url:"php/utilerias.php",
+				data:parametros,
+				success:function(response){
+					if(response.respuesta == true)
+					{
+						alert("Usuario registrado");
+						$("#artAltaUsuarios > input").val(""); 
+					}
+					else
+						alert("Usuario no registrado y/o duplicado");
+				},
+				error:function(xhr,ajaxOptions,thrownError){
+					console.log("No se pudo conectar al servidor");
+				}
+			});
+		}
+		else
+			alert("Todos los campos son obligatorios");
+
 	}
 	var teclaUsuario = function(tecla)
 	{
