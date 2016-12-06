@@ -187,8 +187,51 @@ var inicioUsuarios = function()
 		}
 		else
 			alert("Todos los campos son obligatorios");
-
 	}
+
+	var CambioUsuario = function()
+	{
+		event.preventDefault();
+		//Código para guardar usuario.
+		//Recuperamos los valores del formulario y los
+		//ponemos en variables locales.
+		var usuario = $("#txtUsuarioNombre").val(); 
+		var nombre  = $("#txtNombre").val();
+		var clave   = $("#txtClaveNombre").val();
+		var tipo    = $("#txtTipo").val();
+		if(usuario!="" && nombre!="" && clave!="" && tipo!="")
+		{
+			//Parámetros para el ajax
+			var parametros = "opcion=cambio"+
+							 "&usuario="+usuario+
+							 "&nombre="+nombre+
+							 "&clave="+clave+
+							 "&tipo="+tipo+
+							 "&id="+Math.random();
+			$.ajax({
+				cache:false,
+				type:"POST",
+				dataType:"json",
+				url:"php/utilerias.php",
+				data:parametros,
+				success:function(response){
+					if(response.respuesta == true)
+					{
+						alert("Usuario actualizado");
+						$("#artAltaUsuarios > input").val(""); 
+					}
+					else
+						alert("No se pudo actualizar el usuario");
+				},
+				error:function(xhr,ajaxOptions,thrownError){
+					console.log("No se pudo conectar al servidor");
+				}
+			});
+		}
+		else
+			alert("Todos los campos son obligatorios");
+	}
+
 	//keypress: se ejecuta cada vez que presiono una 
 	//tecla sobre el input.
 	$("#txtClave").on("keypress",teclaClave);
@@ -198,6 +241,7 @@ var inicioUsuarios = function()
 	$("#txtUsuarioNombre").on("keypress",teclaUsuario);
 	$("#btnGuardaUsuario").on("click",GuardaUsuario);
 	$("#btnBajaUsuario").on("click",BajaUsuario);
+	$("#btnCambioUsuario").on("click",CambioUsuario);
 
 }
 //Evento inicial

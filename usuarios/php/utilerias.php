@@ -108,6 +108,26 @@
 		print json_encode($arregloJSON);
 	}
 
+	function cambioUsuario()
+	{
+		$respuesta = false;
+		$u = GetSQLValueString($_POST["usuario"],"text");
+		$n = GetSQLValueString($_POST["nombre"],"text");
+		$c = GetSQLValueString($_POST["clave"],"text");
+		$t = GetSQLValueString($_POST["tipo"],"text");
+		$conexion = mysql_connect("localhost","root","");
+		mysql_select_db("bd2163");
+		$consulta = sprintf("update usuarios set nombre=%s,clave=%s,tipousuario=%s where usuario=%s",$n,$c,$t,$u);
+		mysql_query($consulta);
+		//Si el registro se borró
+		if(mysql_affected_rows()>0) 
+		{
+			$respuesta = true;
+		}
+		$arregloJSON = array('respuesta' => $respuesta );
+		print json_encode($arregloJSON);
+	}
+
 	//Menú principal
 	$opc = $_POST["opcion"];
 	switch ($opc) {
@@ -122,6 +142,9 @@
 			break;
 		case 'baja':
 			bajaUsuario();
+			break;
+		case 'cambio':
+			cambioUsuario();
 			break;
 		default:
 			# code...
